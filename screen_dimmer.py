@@ -12,6 +12,6 @@ def get_displays() -> int:
         return number_of_displays
 
 
-def change_all_brightness(number_of_displays: int, brightness: int):
-    for i in range(number_of_displays):
+def change_all_brightness(brightness: int):
+    for i in range(get_displays()):
         sbc.set_brightness(brightness, display=i)

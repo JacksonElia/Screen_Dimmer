@@ -11,11 +11,8 @@ class TrayApp(QtWidgets.QSystemTrayIcon):
         self.setup_system_tray()
 
     def setup_system_tray(self):
-        # Adding an icon
-        icon = QtGui.QIcon("Screen_Dimmer_Logo.png")
-
         # Adding item on the menu bar
-        self.setIcon(icon)
+        self.setIcon(QtGui.QIcon("Screen_Dimmer_Logo.png"))
         self.setVisible(True)
         self.activated.connect(self.window.show)
 
@@ -26,6 +23,7 @@ class WindowApp(QtWidgets.QMainWindow):
         super(WindowApp, self).__init__()
 
     def setup_ui(self, MainWindow):
+        self.setWindowIcon(QtGui.QIcon("Screen_Dimmer_Logo.png"))
         MainWindow.setObjectName("MainWindow")
         self.setFixedWidth(800)
         self.setFixedHeight(600)
@@ -43,6 +41,7 @@ class WindowApp(QtWidgets.QMainWindow):
         self.horizontalSlider_1.setStyleSheet("")
         self.horizontalSlider_1.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_1.setObjectName("horizontalSlider")
+        self.horizontalSlider_1.valueChanged.connect(lambda: change_all_brightness(self.horizontalSlider_1.value() + 1)),
         self.label_1 = QtWidgets.QLabel(self.centralwidget)
         self.label_1.setGeometry(QtCore.QRect(150, 100, 501, 20))
         font = QtGui.QFont()
@@ -60,6 +59,7 @@ class WindowApp(QtWidgets.QMainWindow):
         self.horizontalSlider_2.setSizePolicy(sizePolicy)
         self.horizontalSlider_2.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_2.setObjectName("horizontalSlider_2")
+        self.horizontalSlider_2.valueChanged.connect(lambda: sbc.set_brightness(self.horizontalSlider_2.value() + 1, 0))
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(150, 180, 501, 20))
         font = QtGui.QFont()
@@ -77,6 +77,7 @@ class WindowApp(QtWidgets.QMainWindow):
         self.horizontalSlider_3.setSizePolicy(sizePolicy)
         self.horizontalSlider_3.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_3.setObjectName("horizontalSlider_3")
+        self.horizontalSlider_3.valueChanged.connect(lambda: sbc.set_brightness(self.horizontalSlider_3.value() + 1, 1))
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(150, 240, 501, 20))
         font = QtGui.QFont()
@@ -94,6 +95,7 @@ class WindowApp(QtWidgets.QMainWindow):
         self.horizontalSlider_4.setSizePolicy(sizePolicy)
         self.horizontalSlider_4.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_4.setObjectName("horizontalSlider_4")
+        self.horizontalSlider_4.valueChanged.connect(lambda: sbc.set_brightness(self.horizontalSlider_4.value() + 1, 2))
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(150, 360, 501, 20))
         font = QtGui.QFont()
@@ -111,6 +113,7 @@ class WindowApp(QtWidgets.QMainWindow):
         self.horizontalSlider_5.setSizePolicy(sizePolicy)
         self.horizontalSlider_5.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_5.setObjectName("horizontalSlider_5")
+        self.horizontalSlider_5.valueChanged.connect(lambda: sbc.set_brightness(self.horizontalSlider_5.value() + 1, 3))
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         self.label_5.setGeometry(QtCore.QRect(150, 300, 501, 20))
         font = QtGui.QFont()
@@ -136,6 +139,7 @@ class WindowApp(QtWidgets.QMainWindow):
         self.horizontalSlider_6.setSizePolicy(sizePolicy)
         self.horizontalSlider_6.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_6.setObjectName("horizontalSlider_6")
+        self.horizontalSlider_6.valueChanged.connect(lambda: sbc.set_brightness(self.horizontalSlider_6.value() + 1, 4))
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
