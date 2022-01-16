@@ -15,6 +15,7 @@ class TrayApp(QtWidgets.QSystemTrayIcon):
         self.setIcon(QtGui.QIcon("Screen_Dimmer_Logo.png"))
         self.setVisible(True)
         self.activated.connect(self.window.show)
+        self.setToolTip("Screen Dimmer - Made by Jackson Elia")
 
 
 class WindowApp(QtWidgets.QMainWindow):
