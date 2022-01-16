@@ -17,6 +17,8 @@ Have fun adjusting your brightness xD
 - [PyQt5](https://pypi.org/project/PyQt5/)
 - [QtDesigner](https://www.qt.io/)
 - [SBC](https://pypi.org/project/screen-brightness-control/)
+
 I made this using PyCharm in Python 3.10
+
 
 MIT © [Traptricker](https://github.com/Traptricker)
