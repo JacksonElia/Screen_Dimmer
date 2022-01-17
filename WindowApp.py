@@ -14,7 +14,7 @@ class TrayApp(QSystemTrayIcon):
 
     def setup_system_tray(self):
         # Adding item on the menu bar
-        self.setIcon(QIcon("Screen_Dimmer_Logo.png"))
+        self.setIcon(QIcon("Screen_Dimmer_Logo.ico"))
         self.setVisible(True)
         self.activated.connect(self.window.show)
         self.setToolTip("Screen Dimmer - Made by Jackson Elia")
@@ -26,7 +26,7 @@ class WindowApp(QMainWindow):
         super(WindowApp, self).__init__()
 
     def setup_ui(self, MainWindow):
-        self.setWindowIcon(QIcon("Screen_Dimmer_Logo.png"))
+        self.setWindowIcon(QIcon("Screen_Dimmer_Logo.ico"))
         MainWindow.setObjectName("MainWindow")
         self.setFixedWidth(800)
         self.setFixedHeight(600)
