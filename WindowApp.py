@@ -88,7 +88,8 @@ class WindowApp(QtWidgets.QMainWindow):
         self.label_3.setStyleSheet("color: white")
         self.label_3.setObjectName("label_3")
         self.horizontalSlider_4 = QtWidgets.QSlider(self.centralwidget)
-        self.horizontalSlider_4.setGeometry(QtCore.QRect(150, 390, 500, 20))
+        # 150, 390, 500, 20
+        self.horizontalSlider_4.setGeometry(QtCore.QRect(150, 330, 500, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -98,7 +99,8 @@ class WindowApp(QtWidgets.QMainWindow):
         self.horizontalSlider_4.setObjectName("horizontalSlider_4")
         self.horizontalSlider_4.valueChanged.connect(lambda: sbc.set_brightness(self.horizontalSlider_4.value() + 1, 2))
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(150, 360, 501, 20))
+        # 150, 360, 501, 20
+        self.label_4.setGeometry(QtCore.QRect(150, 300, 501, 20))
         font = QtGui.QFont()
         font.setFamily("Corbel")
         font.setPointSize(10)
@@ -106,7 +108,8 @@ class WindowApp(QtWidgets.QMainWindow):
         self.label_4.setStyleSheet("color: white")
         self.label_4.setObjectName("label_4")
         self.horizontalSlider_5 = QtWidgets.QSlider(self.centralwidget)
-        self.horizontalSlider_5.setGeometry(QtCore.QRect(150, 330, 500, 20))
+        # 150, 330, 500, 20
+        self.horizontalSlider_5.setGeometry(QtCore.QRect(150, 390, 500, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -116,7 +119,8 @@ class WindowApp(QtWidgets.QMainWindow):
         self.horizontalSlider_5.setObjectName("horizontalSlider_5")
         self.horizontalSlider_5.valueChanged.connect(lambda: sbc.set_brightness(self.horizontalSlider_5.value() + 1, 3))
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(150, 300, 501, 20))
+        # 150, 300, 501, 20
+        self.label_5.setGeometry(QtCore.QRect(150, 360, 501, 20))
         font = QtGui.QFont()
         font.setFamily("Corbel")
         font.setPointSize(10)
@@ -158,8 +162,8 @@ class WindowApp(QtWidgets.QMainWindow):
         self.label_1.setText(_translate("MainWindow", "Adjust All Monitors"))
         self.label_2.setText(_translate("MainWindow", "Monitor #1"))
         self.label_3.setText(_translate("MainWindow", "Monitor #2"))
-        self.label_4.setText(_translate("MainWindow", "Monitor #4"))
-        self.label_5.setText(_translate("MainWindow", "Monitor #3"))
+        self.label_4.setText(_translate("MainWindow", "Monitor #3"))
+        self.label_5.setText(_translate("MainWindow", "Monitor #4"))
         self.label_6.setText(_translate("MainWindow", "Monitor #5"))
 
     def disable_sliders(self, number_of_displays):
