@@ -6,9 +6,9 @@ def get_displays() -> int:
     try:
         # No one has more than 5 monitors
         for i in range(5):
-            sbc.get_brightness(i)
-            number_of_displays = i + 1
-    except sbc.ScreenBrightnessError:
+            sbc.set_brightness("+1", i)
+            number_of_displays += 1
+    except LookupError:
         return number_of_displays
 
 
