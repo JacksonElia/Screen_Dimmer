@@ -8,7 +8,7 @@ def get_displays() -> int:
         for i in range(5):
             sbc.set_brightness("+1", i)
             number_of_displays += 1
-    except LookupError:
+    except (LookupError, sbc.ScreenBrightnessError):
         return number_of_displays
 
 
