@@ -21,4 +21,4 @@ Have fun adjusting your brightness xD
 I made this using PyCharm in Python 3.10
 
 
-MIT © [Traptricker](https://github.com/Traptricker)
+MIT © 2023 [Jackson Elia](https://github.com/JacksonElia)
